@@ -1,0 +1,63 @@
+.button-variant(@color; @background; @border) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		color: @color;
+		background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+	}
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: @border;
+		}
+	}
+
+	.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
+
+.gradient (@origin: left, @fallback: @white,  @stops){
+    background-color: @fallback;
+    background: -webkit-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:    -moz-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:    -ms-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:      -o-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:         linear-gradient(@origin, @stops) @fallback no-repeat;
+}
+
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+
+.scale(@ratio_x:1.5, @ratio_y:@ratio_x) {
+  .transform(scale(@ratio_x, @ratio_y));
+}
