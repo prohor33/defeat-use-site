@@ -1,7 +1,8 @@
 .full {
-  /*background: url('../img/back.png');*/
+  /* background image setuped directly in html because of android bug */
   background-repeat: no-repeat;
-  background-position: center center fixed;
+  background-attachment: fixed;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
