@@ -51,7 +51,6 @@
 	display: inline-block;
 	width: 190px;
 	.rounded(@radius: 8px);
-	/*.drop-shadow(@x: 2px; @y: 2px; @blur: 8px; @spread: 2px; @alpha: 0.35);*/
 	.drop-shadow(@x: 1px; @y: 2px; @blur: 10px; @spread: 3px; @alpha: 0.4);
 }
 
@@ -91,5 +90,28 @@
 	.store-btn {
 		/*190*/
 		width: 158px;
+		.rounded(@radius: 6px);
+		.drop-shadow(@x: 1px; @y: 2px; @blur: 7px; @spread: 2px; @alpha: 0.4);
+	}
+}
+
+@media (max-width: 400px) {
+	.header {
+		/*47*/
+	  font-size: 23px;
+	}
+	#main-header-second-string {
+		/*39*/
+  		font-size: 19px;
+	}
+	.second-header {
+		/*24*/
+  		font-size: 12px;
+	}
+	.store-btn {
+		/*190*/
+		width: 95px;
+		.rounded(@radius: 4px);
+		.drop-shadow(@x: 1px; @y: 2px; @blur: 5px; @spread: 1px; @alpha: 0.4);
 	}
 }
