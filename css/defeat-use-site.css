@@ -1,9 +1,91 @@
-/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
-
 .full {
-    background: url('../img/back.png') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  background: url('../img/back.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+.header {
+  /*display: inline;*/
+  position: absolute;
+  text-align: center;
+  color: #1f3d8e;
+  font-size: 47px;
+  top: 23%;
+  margin-left: -15px;
+  margin-right: auto;
+  font-family: 'Roboto';
+  font: bold;
+}
+.header-container {
+  display: inline-block;
+  text-align: left;
+}
+#main-header-second-string {
+  font-size: 39px;
+  letter-spacing: 15px;
+  margin-top: -11px;
+}
+.second-header {
+  color: #c34838;
+  font-size: 24px;
+  /* 16 * 0.0625 = 1px */
+  letter-spacing: 0.10em;
+  margin-top: -11px;
+}
+#second-header-second-string {
+  margin-top: 0px;
+}
+.store-btn {
+  display: inline-block;
+  width: 190px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  /*.drop-shadow(@x: 2px; @y: 2px; @blur: 8px; @spread: 2px; @alpha: 0.35);*/
+  -webkit-box-shadow: 1px 2px 10px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 2px 10px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 10px 3px rgba(0, 0, 0, 0.4);
+}
+.store-buttons-container {
+  margin-top: 34%;
+  display: inline-block;
+  /*  margin: 0px;
+  padding: 0px;*/
+  /*width: 50%;*/
+}
+@media (max-width: 970px) {
+  .header {
+    -webkit-text-shadow: 0px 0px 4px #ffffff;
+    -moz-text-shadow: 0px 0px 4px #ffffff;
+    text-shadow: 0px 0px 4px #ffffff;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    /*47*/
+    font-size: 39px;
+  }
+  #main-header-second-string {
+    /*39*/
+    font-size: 32px;
+  }
+  .second-header {
+    /*24*/
+    font-size: 20px;
+  }
+  .store-btn {
+    /*190*/
+    width: 158px;
+  }
 }
