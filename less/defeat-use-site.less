@@ -1,6 +1,25 @@
 @import "variables.less";
 @import "mixins.less";
 
+  html, body {
+      height: 100%;
+  }
+  html {
+      overflow-y: hidden;
+  }
+  body {
+      overflow-y: scroll;
+      background-color:#000000;
+      background-image:url('../img/back.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+
 .full {
 	/* background image setuped directly in html because of android bug */
   	background-repeat: no-repeat;
